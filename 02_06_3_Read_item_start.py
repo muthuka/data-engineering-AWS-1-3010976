@@ -4,10 +4,10 @@ dynamodb = boto3.resource('dynamodb')
 
 table = dynamodb.Table('Employees')
 
-response = table.<provide method here>(
+response = table.get_item(
     Key={
-        'Name': <provide name here>,
-        'Email': <provide email here>
+        'Name': 'Mark Wilbur',
+        'Email': 'markwilbur@dataengineer.cloud'
     }
 )
 print(response['Item'])

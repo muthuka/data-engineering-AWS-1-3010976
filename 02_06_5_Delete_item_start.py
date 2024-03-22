@@ -4,6 +4,7 @@ dynamodb = boto3.resource('dynamodb')
 
 table = dynamodb.Table('Employees')
 
-response = table.<provide method here>(Key = {'Name': <provide name here>, 'Email': <provide email here>})
+response = table.delete_item(
+    Key={'Name': 'Mark Wilbur', 'Email': 'markwilbur@dataengineer.cloud'})
 
 print(response)
